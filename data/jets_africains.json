@@ -1,0 +1,1072 @@
+[
+  {
+    "pays": "Afrique du Sud",
+    "flotte": [
+      {
+        "icao24": "00aec9",
+        "tail_number": "ZS-RSA",
+        "modele": "Boeing 737-7ED BBJ",
+        "usage": "présidentiel",
+        "autonomie_km": 11480,
+        "consommation_kg_par_heure": 2600,
+        "source": "ADSBExchange",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Cyril Ramaphosa",
+    "type_regime": "parlementaire"
+  },
+  {
+    "pays": "Algérie",
+    "flotte": [
+      {
+        "icao24": "0a402d",
+        "tail_number": "7T-VPP",
+        "modele": "Airbus A340-541",
+        "usage": "présidentiel",
+        "autonomie_km": 16700,
+        "consommation_kg_par_heure": 7500,
+        "source": "JetPhotos / DictatorAlert",
+        "verifie": true
+      },
+      {
+        "icao24": "0a400b",
+        "tail_number": "7T-VPG",
+        "modele": "Gulfstream G-V",
+        "usage": "gouvernemental",
+        "autonomie_km": 10742,
+        "consommation_kg_par_heure": 1100,
+        "source": "DictatorAlert",
+        "verifie": true
+      },
+      {
+        "icao24": null,
+        "tail_number": "7T-VPB",
+        "modele": "Gulfstream G600",
+        "usage": "gouvernemental",
+        "autonomie_km": 12964,
+        "consommation_kg_par_heure": 1100,
+        "source": "JetPhotos / laasdata",
+        "verifie": false
+      },
+      {
+        "icao24": null,
+        "tail_number": "7T-VPC",
+        "modele": "Gulfstream IV-SP",
+        "usage": "gouvernemental",
+        "autonomie_km": 7820,
+        "consommation_kg_par_heure": 1050,
+        "source": "JetPhotos",
+        "verifie": false
+      },
+      {
+        "icao24": null,
+        "tail_number": "7T-VPR",
+        "modele": "Gulfstream IV-SP",
+        "usage": "gouvernemental",
+        "autonomie_km": 7820,
+        "consommation_kg_par_heure": 1050,
+        "source": "airhistory.net",
+        "verifie": false
+      },
+      {
+        "icao24": null,
+        "tail_number": "7T-VPS",
+        "modele": "Gulfstream IV-SP",
+        "usage": "gouvernemental",
+        "autonomie_km": 7820,
+        "consommation_kg_par_heure": 1050,
+        "source": "JetPhotos",
+        "verifie": false
+      },
+      {
+        "icao24": null,
+        "tail_number": "7T-VPE",
+        "modele": "ATR 72-600",
+        "usage": "gouvernemental",
+        "autonomie_km": 1528,
+        "consommation_kg_par_heure": 600,
+        "source": "JetPhotos",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Abdelmadjid Tebboune",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Angola",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu — flotte non vérifiée publiquement",
+        "usage": "présidentiel",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "João Lourenço",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Botswana",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Duma Boko",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Burkina Faso",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Ibrahim Traoré",
+    "type_regime": "junte"
+  },
+  {
+    "pays": "Burundi",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Évariste Ndayishimiye",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Bénin",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Avion privé personnel (Boeing 737)",
+        "usage": "présidentiel",
+        "autonomie_km": 5600,
+        "consommation_kg_par_heure": 2600,
+        "source": "Presse",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Patrice Talon",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Cameroun",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": "TJ-AAC",
+        "modele": "Boeing 767-216ER",
+        "usage": "présidentiel",
+        "autonomie_km": 12200,
+        "consommation_kg_par_heure": 5500,
+        "source": "JetPhotos",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Paul Biya",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Cap-Vert",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "José Maria Neves",
+    "type_regime": "parlementaire"
+  },
+  {
+    "pays": "Comores",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Azali Assoumani",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Congo-Brazzaville",
+    "flotte": [
+      {
+        "icao24": "036bc1",
+        "tail_number": "TN-ELS",
+        "modele": "Dassault Falcon 7X",
+        "usage": "présidentiel",
+        "autonomie_km": 11019,
+        "consommation_kg_par_heure": 1100,
+        "source": "DictatorAlert / AfricaNews",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Denis Sassou Nguesso",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Côte d'Ivoire",
+    "flotte": [
+      {
+        "icao24": "038f4a",
+        "tail_number": "TU-VAJ",
+        "modele": "Airbus A320-251N ACJ",
+        "usage": "présidentiel",
+        "autonomie_km": 11100,
+        "consommation_kg_par_heure": 2800,
+        "source": "ADSBExchange",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Alassane Ouattara",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Djibouti",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Ismaïl Omar Guelleh",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Eswatini",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Roi Mswati III",
+    "type_regime": "monarchie"
+  },
+  {
+    "pays": "Gabon",
+    "flotte": [
+      {
+        "icao24": "03e00a",
+        "tail_number": "TR-KPR",
+        "modele": "Boeing 777-236",
+        "usage": "présidentiel",
+        "autonomie_km": 17370,
+        "consommation_kg_par_heure": 7500,
+        "source": "DictatorAlert",
+        "verifie": true
+      },
+      {
+        "icao24": "03e00f",
+        "tail_number": "TR-KJD",
+        "modele": "ATR 42M-312",
+        "usage": "gouvernemental",
+        "autonomie_km": 1326,
+        "consommation_kg_par_heure": 450,
+        "source": "aviation.flights",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Brice Oligui Nguema",
+    "type_regime": "junte"
+  },
+  {
+    "pays": "Gambie",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Adama Barrow",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Ghana",
+    "flotte": [
+      {
+        "icao24": "044037",
+        "tail_number": "9G-EXE",
+        "modele": "Dassault Falcon 900EX",
+        "usage": "présidentiel",
+        "autonomie_km": 8340,
+        "consommation_kg_par_heure": 1200,
+        "source": "airport-data.com",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "John Mahama",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Guinée",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Mamadi Doumbouya",
+    "type_regime": "junte"
+  },
+  {
+    "pays": "Guinée équatoriale",
+    "flotte": [
+      {
+        "icao24": "04200a",
+        "tail_number": "3C-EGE",
+        "modele": "Boeing 737-7FB BBJ",
+        "usage": "présidentiel",
+        "autonomie_km": 11480,
+        "consommation_kg_par_heure": 2600,
+        "source": "JetPhotos / OneSpotter",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Teodoro Obiang Nguema Mbasogo",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Guinée-Bissau",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Umaro Sissoco Embaló",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Kenya",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": "KAF308",
+        "modele": "Fokker 70",
+        "usage": "présidentiel",
+        "autonomie_km": 3410,
+        "consommation_kg_par_heure": 1800,
+        "source": "Wikipedia / ch-aviation",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "William Ruto",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Lesotho",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Letsie III",
+    "type_regime": "monarchie"
+  },
+  {
+    "pays": "Liberia",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Joseph Boakai",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Libye",
+    "flotte": [
+      {
+        "icao24": "018021",
+        "tail_number": "5A-ONE",
+        "modele": "Airbus A340-213",
+        "usage": "présidentiel",
+        "autonomie_km": 13700,
+        "consommation_kg_par_heure": 7500,
+        "source": "ADSBExchange",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Mohamed al-Menfi",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Madagascar",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Boeing 737 (affrété)",
+        "usage": "présidentiel",
+        "autonomie_km": 5600,
+        "consommation_kg_par_heure": 2600,
+        "source": "Presse locale",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Andry Rajoelina",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Malawi",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Lazarus Chakwera",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Mali",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Assimi Goïta",
+    "type_regime": "junte"
+  },
+  {
+    "pays": "Maroc",
+    "flotte": [
+      {
+        "icao24": "020130",
+        "tail_number": "CN-MBH",
+        "modele": "Boeing 747-8Z5 BBJ",
+        "usage": "présidentiel",
+        "autonomie_km": 14320,
+        "consommation_kg_par_heure": 11200,
+        "source": "FlightRadar24",
+        "verifie": true
+      },
+      {
+        "icao24": "0200cc",
+        "tail_number": "CN-MVI",
+        "modele": "Boeing 737-8KB BBJ2",
+        "usage": "gouvernemental",
+        "autonomie_km": 10200,
+        "consommation_kg_par_heure": 2600,
+        "source": "OneSpotter",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Roi Mohammed VI",
+    "type_regime": "monarchie"
+  },
+  {
+    "pays": "Maurice",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Prithvirajsing Roopun",
+    "type_regime": "parlementaire"
+  },
+  {
+    "pays": "Mauritanie",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Mohamed Ould Ghazouani",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Mozambique",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Filipe Nyusi",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Namibie",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Dassault Falcon 900",
+        "usage": "présidentiel",
+        "autonomie_km": 7400,
+        "consommation_kg_par_heure": 1200,
+        "source": "Presse",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Nangolo Mbumba",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Niger",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Abdourahamane Tchiani",
+    "type_regime": "junte"
+  },
+  {
+    "pays": "Nigeria",
+    "flotte": [
+      {
+        "icao24": "06430c",
+        "tail_number": "5N-FGA",
+        "modele": "Airbus A330-243",
+        "usage": "présidentiel",
+        "autonomie_km": 13450,
+        "consommation_kg_par_heure": 5500,
+        "source": "ADSBExchange",
+        "verifie": true
+      },
+      {
+        "icao24": "064051",
+        "tail_number": "5N-FGT",
+        "modele": "Boeing 737-7N6 BBJ",
+        "usage": "présidentiel",
+        "autonomie_km": 11480,
+        "consommation_kg_par_heure": 2600,
+        "source": "ADSBExchange",
+        "verifie": true
+      },
+      {
+        "icao24": "06401c",
+        "tail_number": "5N-FGS",
+        "modele": "Gulfstream V-SP (G550)",
+        "usage": "gouvernemental",
+        "autonomie_km": 12501,
+        "consommation_kg_par_heure": 1100,
+        "source": "ADSBExchange",
+        "verifie": true
+      },
+      {
+        "icao24": "0640f1",
+        "tail_number": "5N-FGV",
+        "modele": "Dassault Falcon 7X",
+        "usage": "gouvernemental",
+        "autonomie_km": 11019,
+        "consommation_kg_par_heure": 1100,
+        "source": "FoxtrotCharlie / ADSBExchange",
+        "verifie": true
+      },
+      {
+        "icao24": "0640f0",
+        "tail_number": "5N-FGU",
+        "modele": "Dassault Falcon 7X",
+        "usage": "gouvernemental",
+        "autonomie_km": 11019,
+        "consommation_kg_par_heure": 1100,
+        "source": "ADSBExchange / Wikimedia",
+        "verifie": true
+      },
+      {
+        "icao24": "0640f2",
+        "tail_number": "5N-FGW",
+        "modele": "Gulfstream G550",
+        "usage": "vice-présidentiel",
+        "autonomie_km": 12501,
+        "consommation_kg_par_heure": 1100,
+        "source": "airport-data.com",
+        "verifie": true
+      },
+      {
+        "icao24": "0641e1",
+        "tail_number": "5N-FGZ",
+        "modele": "Bombardier Challenger 605",
+        "usage": "gouvernemental",
+        "autonomie_km": 7408,
+        "consommation_kg_par_heure": 1050,
+        "source": "FlightRadar24 / ads-b.nl",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Bola Tinubu",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Ouganda",
+    "flotte": [
+      {
+        "icao24": "06804e",
+        "tail_number": "5X-UGF",
+        "modele": "Gulfstream G550",
+        "usage": "présidentiel",
+        "autonomie_km": 12501,
+        "consommation_kg_par_heure": 1100,
+        "source": "ads-b.nl",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Yoweri Museveni",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Rwanda",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Avion affrété (Gulfstream / Bombardier)",
+        "usage": "présidentiel",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": "Presse",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Paul Kagame",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "République Démocratique du Congo",
+    "flotte": [
+      {
+        "icao24": "08cbab",
+        "tail_number": "9S-CGC",
+        "modele": "Gulfstream IV",
+        "usage": "présidentiel",
+        "autonomie_km": 7820,
+        "consommation_kg_par_heure": 1050,
+        "source": "airliners.net",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Félix Tshisekedi",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "République centrafricaine",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Faustin-Archange Touadéra",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Seychelles",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Wavel Ramkalawan",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Sierra Leone",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Julius Maada Bio",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Somalie",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Hassan Sheikh Mohamoud",
+    "type_regime": "parlementaire"
+  },
+  {
+    "pays": "Soudan",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Abdel Fattah al-Burhan",
+    "type_regime": "junte"
+  },
+  {
+    "pays": "Soudan du Sud",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Salva Kiir",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "São Tomé-et-Príncipe",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Carlos Vila Nova",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Sénégal",
+    "flotte": [
+      {
+        "icao24": "0703fa",
+        "tail_number": "6V-SEN",
+        "modele": "Airbus A320-251N ACJ",
+        "usage": "présidentiel",
+        "autonomie_km": 11100,
+        "consommation_kg_par_heure": 2800,
+        "source": "JetPhotos / ADSBExchange",
+        "verifie": true
+      }
+    ],
+    "dirigeant": "Bassirou Diomaye Faye",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Tanzanie",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": "5H-ONE",
+        "modele": "Gulfstream G700",
+        "usage": "présidentiel",
+        "autonomie_km": 14260,
+        "consommation_kg_par_heure": 1200,
+        "source": "airguide.info / ch-aviation",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Samia Suluhu Hassan",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Tchad",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Mahamat Idriss Déby",
+    "type_regime": "junte"
+  },
+  {
+    "pays": "Togo",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Faure Gnassingbé",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Tunisie",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": "TS-KRT",
+        "modele": "Airbus A340-542",
+        "usage": "présidentiel",
+        "autonomie_km": 16700,
+        "consommation_kg_par_heure": 7500,
+        "source": "JetPhotos",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Kaïs Saïed",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Zambie",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Hakainde Hichilema",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Zimbabwe",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Emmerson Mnangagwa",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Égypte",
+    "flotte": [
+      {
+        "icao24": "010024",
+        "tail_number": "SU-GGG",
+        "modele": "Airbus A340-211",
+        "usage": "présidentiel",
+        "autonomie_km": 13700,
+        "consommation_kg_par_heure": 7500,
+        "source": "ADSBExchange",
+        "verifie": true
+      },
+      {
+        "icao24": null,
+        "tail_number": "SU-EGY",
+        "modele": "Boeing 747-8 VIP",
+        "usage": "présidentiel",
+        "autonomie_km": 14320,
+        "consommation_kg_par_heure": 11200,
+        "source": "Presse / aerospaceglobalnews",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Abdel Fattah al-Sissi",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Érythrée",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Inconnu",
+        "usage": "inconnu",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": null,
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Issaias Afwerki",
+    "type_regime": "présidentiel"
+  },
+  {
+    "pays": "Éthiopie",
+    "flotte": [
+      {
+        "icao24": null,
+        "tail_number": null,
+        "modele": "Avion affrété via Ethiopian Airlines",
+        "usage": "gouvernemental",
+        "autonomie_km": null,
+        "consommation_kg_par_heure": null,
+        "source": "Presse / militaryfactory.com",
+        "verifie": false
+      }
+    ],
+    "dirigeant": "Abiy Ahmed",
+    "type_regime": "parlementaire",
+    "titre": "Premier Ministre",
+    "president_ceremoniel": "Taye Atske Selassie"
+  }
+]

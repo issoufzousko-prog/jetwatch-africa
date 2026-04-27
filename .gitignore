@@ -1,0 +1,5 @@
+.env
+*.db
+__pycache__/
+poll.log
+mock_flights.json
