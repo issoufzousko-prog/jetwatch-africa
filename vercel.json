@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd frontend && npm install --legacy-peer-deps && npm run build",
-
+  "buildCommand": "cd frontend && npm install --legacy-peer-deps && npm run build && rm -rf node_modules",
   "outputDirectory": "frontend/dist",
   "rewrites": [
     {
@@ -25,11 +24,7 @@
       "destination": "/index.html"
     }
   ],
-  "functions": {
-    "api/index.py": {
-      "excludeFiles": "frontend/**"
-    }
-  },
+
   "crons": [
     {
       "path": "/api/cron/poll",
