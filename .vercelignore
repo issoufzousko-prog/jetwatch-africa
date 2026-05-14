@@ -1,5 +1,7 @@
 frontend/node_modules
 frontend/dist
+frontend/public
+aircraftDatabase.csv
 .venv
 __pycache__
 *.pyc

@@ -22,7 +22,7 @@ from typing import Optional
 
 # ── Détection de la disponibilité de CrewAI ──────────────────────────────────
 try:
-    from crewai import Agent, Task, Crew, Process, LLM
+    from crewai import Agent, Task, Crew, Process
     from crewai.tools import tool
     import requests
     CREWAI_AVAILABLE = True
@@ -33,44 +33,24 @@ except ImportError:
 # ── Configuration LLM (Groq par défaut — gratuit et rapide) ──────────────────
 def get_llm(model_id: str = "groq/llama-3.3-70b-versatile"):
     """
-    Retourne la configuration LLM pour CrewAI.
+    Retourne la configuration LLM pour CrewAI via LangChain.
     Utilise dynamiquement le model_id sélectionné par l'utilisateur.
-    Priorité : Groq (avec model_id) > OpenAI > Anthropic > Ollama local
     """
     groq_key = os.getenv("GROQ_API_KEY")
-    openai_key = os.getenv("OPENAI_API_KEY")
-    anthropic_key = os.getenv("ANTHROPIC_API_KEY")
 
     if groq_key:
+        from langchain_groq import ChatGroq
         # Utilise le modèle choisi par l'utilisateur via le frontend
         print(f"[CrewAI] Modèle sélectionné : {model_id}")
-        return LLM(
-            model=model_id,
-            api_key=groq_key,
-            temperature=0.1,
-            max_tokens=4000,
-        )
-    elif openai_key:
-        return LLM(
-            model="gpt-4o-mini",
-            api_key=openai_key,
-            temperature=0.1,
-            max_tokens=4000,
-        )
-    elif anthropic_key:
-        return LLM(
-            model="claude-3-haiku-20240307",
-            api_key=anthropic_key,
+        model_name = model_id.split("/")[-1] if "/" in model_id else model_id
+        return ChatGroq(
+            model_name=model_name,
+            groq_api_key=groq_key,
             temperature=0.1,
             max_tokens=4000,
         )
     else:
-        # Ollama local (nécessite Ollama installé)
-        return LLM(
-            model="ollama/llama3.1",
-            base_url="http://localhost:11434",
-            temperature=0.1,
-        )
+        raise ValueError("GROQ_API_KEY manquante. Seul Groq est supporté dans cette version allégée.")
 
 
 # ── Résultat d'une investigation ──────────────────────────────────────────────

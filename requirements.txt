@@ -16,7 +16,8 @@ python-jose[cryptography]
 cohere
 
 # ── Intelligence IA — Pipeline d'investigation CrewAI ──────────────────────
-crewai>=0.80.0
+crewai==0.22.4
+langchain-groq
 groq>=0.8.0                 # LLM Groq (Llama 3.1 70B — gratuit, recommandé)
 psycopg2-binary             # Support pour base de données Postgres sur Vercel
 apscheduler                 # Planificateur de tâches (utilisé en fallback local)
