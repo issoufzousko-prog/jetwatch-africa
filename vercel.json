@@ -1,8 +1,7 @@
 {
   "version": 2,
-  "//": "Force redeploy 1",
-
   "rewrites": [
+
     {
       "source": "/api/(.*)",
       "destination": "/api/index.py"
