@@ -1,15 +1,55 @@
 {
   "version": 2,
+  "framework": "vite",
   "builds": [
     {
-      "src": "index.html",
-      "use": "@vercel/static"
+      "src": "api/index.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/pow/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/ecdh/(.*)",
+      "dest": "api/index.py"
+    },
+    {
+        "src": "/proxy-image",
+        "dest": "api/index.py"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
-      "dest": "index.html"
+      "dest": "/frontend/dist/$1",
+      "check": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/dist/index.html"
+    }
+
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/poll",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/cron/clean",
+      "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/cron/daily-post",
+      "schedule": "0 18 * * *"
     }
   ]
 }

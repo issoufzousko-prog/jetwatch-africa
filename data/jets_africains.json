@@ -50,44 +50,44 @@
         "verifie": false
       },
       {
-        "icao24": null,
+        "icao24": "0a4009",
         "tail_number": "7T-VPC",
         "modele": "Gulfstream IV-SP",
         "usage": "gouvernemental",
         "autonomie_km": 7820,
         "consommation_kg_par_heure": 1050,
         "source": "JetPhotos",
-        "verifie": false
+        "verifie": true
       },
       {
-        "icao24": null,
+        "icao24": "0a4005",
         "tail_number": "7T-VPR",
         "modele": "Gulfstream IV-SP",
         "usage": "gouvernemental",
         "autonomie_km": 7820,
         "consommation_kg_par_heure": 1050,
         "source": "airhistory.net",
-        "verifie": false
+        "verifie": true
       },
       {
-        "icao24": null,
+        "icao24": "0a4006",
         "tail_number": "7T-VPS",
         "modele": "Gulfstream IV-SP",
         "usage": "gouvernemental",
         "autonomie_km": 7820,
         "consommation_kg_par_heure": 1050,
         "source": "JetPhotos",
-        "verifie": false
+        "verifie": true
       },
       {
-        "icao24": null,
+        "icao24": "0a404c",
         "tail_number": "7T-VPE",
         "modele": "ATR 72-600",
         "usage": "gouvernemental",
         "autonomie_km": 1528,
         "consommation_kg_par_heure": 600,
         "source": "JetPhotos",
-        "verifie": false
+        "verifie": true
       }
     ],
     "dirigeant": "Abdelmadjid Tebboune",
@@ -105,6 +105,18 @@
         "consommation_kg_par_heure": null,
         "source": null,
         "verifie": false
+      },
+      {
+        "icao24": "090088",
+        "tail_number": "D2-ANG",
+        "description": "Bombardier Global Express XRS (Government Of Angola)",
+        "verifie": true
+      },
+      {
+        "icao24": "0900b5",
+        "tail_number": "D2-EEB",
+        "description": "Bombardier DHC-8 402 (Government Of Angola)",
+        "verifie": true
       }
     ],
     "dirigeant": "João Lourenço",
@@ -139,6 +151,12 @@
         "consommation_kg_par_heure": null,
         "source": null,
         "verifie": false
+      },
+      {
+        "icao24": "09c008",
+        "tail_number": "XT-BFA",
+        "description": "Boeing 727 282/W (Government Of Burkina Faso)",
+        "verifie": true
       }
     ],
     "dirigeant": "Ibrahim Traoré",
@@ -156,6 +174,12 @@
         "consommation_kg_par_heure": null,
         "source": null,
         "verifie": false
+      },
+      {
+        "icao24": "032007",
+        "tail_number": "9U-BKB",
+        "description": "Gulfstream Aerospace GIV (Government Of Burundi)",
+        "verifie": true
       }
     ],
     "dirigeant": "Évariste Ndayishimiye",
@@ -190,6 +214,18 @@
         "consommation_kg_par_heure": 5500,
         "source": "JetPhotos",
         "verifie": false
+      },
+      {
+        "icao24": "034066",
+        "tail_number": "TJ-QCB",
+        "description": "Boeing 737-7BD (W) (Camair Co)",
+        "verifie": true
+      },
+      {
+        "icao24": "034044",
+        "tail_number": "TJ-QCA",
+        "description": "Boeing 737NG 7BD/W (Camair-co)",
+        "verifie": true
       }
     ],
     "dirigeant": "Paul Biya",
@@ -241,6 +277,18 @@
         "consommation_kg_par_heure": 1100,
         "source": "DictatorAlert / AfricaNews",
         "verifie": true
+      },
+      {
+        "icao24": "0360b2",
+        "tail_number": "TN-AFS",
+        "description": "Ilyushin IL-76 TD (Lina Congo)",
+        "verifie": true
+      },
+      {
+        "icao24": "0360f8",
+        "tail_number": "TN-AJN",
+        "description": "Dassault Falcon 50 (Government Of The Republic Of Congo)",
+        "verifie": true
       }
     ],
     "dirigeant": "Denis Sassou Nguesso",
@@ -250,13 +298,39 @@
     "pays": "Côte d'Ivoire",
     "flotte": [
       {
-        "icao24": "038f4a",
-        "tail_number": "TU-VAJ",
-        "modele": "Airbus A320-251N ACJ",
+        "icao24": "038613",
+        "tail_number": "TU-VAS",
+        "modele": "Airbus A319-133 ACJ",
         "usage": "présidentiel",
         "autonomie_km": 11100,
-        "consommation_kg_par_heure": 2800,
-        "source": "ADSBExchange",
+        "consommation_kg_par_heure": 2400,
+        "source": "User Correction",
+        "verifie": true
+      },
+      {
+        "icao24": "038615",
+        "tail_number": "TU-VAE",
+        "modele": "Gulfstream G550",
+        "usage": "gouvernemental",
+        "autonomie_km": 12500,
+        "consommation_kg_par_heure": 1100,
+        "source": "User Correction",
+        "verifie": true
+      },
+      {
+        "icao24": "707505",
+        "tail_number": "TU-VAG",
+        "modele": "Gulfstream G450",
+        "usage": "gouvernemental",
+        "autonomie_km": 8000,
+        "consommation_kg_par_heure": 1100,
+        "source": "User Correction",
+        "verifie": true
+      },
+      {
+        "icao24": "038084",
+        "tail_number": "TU-VAD",
+        "description": "Gulfstream Aerospace GIV (Government Of Ivory Coast)",
         "verifie": true
       }
     ],
@@ -275,6 +349,12 @@
         "consommation_kg_par_heure": null,
         "source": null,
         "verifie": false
+      },
+      {
+        "icao24": "098014",
+        "tail_number": "J2-HPV",
+        "description": "Dassault Falcon 7X (Ivory Jet Services)",
+        "verifie": true
       }
     ],
     "dirigeant": "Ismaïl Omar Guelleh",
@@ -292,6 +372,12 @@
         "consommation_kg_par_heure": null,
         "source": null,
         "verifie": false
+      },
+      {
+        "icao24": "07a201",
+        "tail_number": "3DC-SDF",
+        "description": "Airbus A340-313 (Government of Eswatini)",
+        "verifie": true
       }
     ],
     "dirigeant": "Roi Mswati III",
@@ -413,14 +499,14 @@
     "pays": "Kenya",
     "flotte": [
       {
-        "icao24": null,
+        "icao24": "04c030",
         "tail_number": "KAF308",
         "modele": "Fokker 70",
         "usage": "présidentiel",
         "autonomie_km": 3410,
         "consommation_kg_par_heure": 1800,
         "source": "Wikipedia / ch-aviation",
-        "verifie": false
+        "verifie": true
       }
     ],
     "dirigeant": "William Ruto",
@@ -763,6 +849,12 @@
         "consommation_kg_par_heure": 1050,
         "source": "airliners.net",
         "verifie": true
+      },
+      {
+        "icao24": "08cbcb",
+        "tail_number": "9Q-CDC",
+        "description": "Boeing 727 30/W (Government Of Democratic Republic Of Congo)",
+        "verifie": true
       }
     ],
     "dirigeant": "Félix Tshisekedi",
@@ -899,6 +991,24 @@
         "consommation_kg_par_heure": 2800,
         "source": "JetPhotos / ADSBExchange",
         "verifie": true
+      },
+      {
+        "icao24": "070ed4",
+        "tail_number": "6V-ONE",
+        "description": "Airbus ACJ319 115X (Government Of Senegal)",
+        "verifie": true
+      },
+      {
+        "icao24": "070156",
+        "tail_number": "6V-AEF",
+        "description": "Boeing 727 2M1/W (Government Of Senegal)",
+        "verifie": true
+      },
+      {
+        "icao24": "340001",
+        "tail_number": "6V-SEN",
+        "description": "Dassault Aviation Falcon 7X (Gouvernement de la Republique du Senegal)",
+        "verifie": true
       }
     ],
     "dirigeant": "Bassirou Diomaye Faye",
@@ -908,14 +1018,14 @@
     "pays": "Tanzanie",
     "flotte": [
       {
-        "icao24": null,
+        "icao24": "08000f",
         "tail_number": "5H-ONE",
         "modele": "Gulfstream G700",
         "usage": "présidentiel",
         "autonomie_km": 14260,
         "consommation_kg_par_heure": 1200,
         "source": "airguide.info / ch-aviation",
-        "verifie": false
+        "verifie": true
       }
     ],
     "dirigeant": "Samia Suluhu Hassan",
@@ -950,6 +1060,18 @@
         "consommation_kg_par_heure": null,
         "source": null,
         "verifie": false
+      },
+      {
+        "icao24": "088005",
+        "tail_number": "5V-TAI",
+        "description": "Fokker F28 1000 (Government Of Togo)",
+        "verifie": true
+      },
+      {
+        "icao24": "08800a",
+        "tail_number": "5V-TTS",
+        "description": "Dassault Falcon 900 (Comfort Jet Services)",
+        "verifie": true
       }
     ],
     "dirigeant": "Faure Gnassingbé",
@@ -1020,14 +1142,14 @@
         "verifie": true
       },
       {
-        "icao24": null,
+        "icao24": "010230",
         "tail_number": "SU-EGY",
         "modele": "Boeing 747-8 VIP",
         "usage": "présidentiel",
         "autonomie_km": 14320,
         "consommation_kg_par_heure": 11200,
         "source": "Presse / aerospaceglobalnews",
-        "verifie": false
+        "verifie": true
       }
     ],
     "dirigeant": "Abdel Fattah al-Sissi",
@@ -1068,5 +1190,77 @@
     "type_regime": "parlementaire",
     "titre": "Premier Ministre",
     "president_ceremoniel": "Taye Atske Selassie"
+  },
+  {
+    "pays": "Elon Musk",
+    "dirigeant": "Elon Musk",
+    "type_regime": "entrepreneur, homme d'affaires, chef d'entreprise et homme politique sud-africain, canadien et américain",
+    "flotte": [
+      {
+        "icao24": "a835af",
+        "tail_number": "N628TS",
+        "modele": "Gulfstream G650ER",
+        "usage": "privé",
+        "autonomie_km": 13890,
+        "consommation_kg_par_heure": 1500,
+        "source": "ADSBExchange",
+        "verifie": true
+      }
+    ],
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Elon_Musk_-_54820081119_%28cropped%29.jpg"
+  },
+  {
+    "pays": "Mark Zuckerberg",
+    "dirigeant": "Mark Zuckerberg",
+    "type_regime": "entrepreneur américain",
+    "flotte": [
+      {
+        "icao24": "a91911",
+        "tail_number": "N68KP",
+        "modele": "Gulfstream G650",
+        "usage": "privé",
+        "autonomie_km": 12964,
+        "consommation_kg_par_heure": 1500,
+        "source": "ADSBExchange",
+        "verifie": true
+      }
+    ],
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Mark_Zuckerberg_in_September_2025_%28cropped%29.jpg"
+  },
+  {
+    "pays": "Kim Kardashian",
+    "dirigeant": "Kim Kardashian",
+    "type_regime": "personnalité américaine de la télévision et des médias sociaux",
+    "flotte": [
+      {
+        "icao24": "a18706",
+        "tail_number": "N1980K",
+        "modele": "Gulfstream G650ER (Kim Air)",
+        "usage": "privé",
+        "autonomie_km": 13890,
+        "consommation_kg_par_heure": 1500,
+        "source": "ADSBExchange",
+        "verifie": true
+      }
+    ],
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Kim_Kardashian_West_2014.jpg"
+  },
+  {
+    "pays": "Bernard Arnault",
+    "dirigeant": "Bernard Arnault",
+    "type_regime": "chef d'entreprise français",
+    "flotte": [
+      {
+        "icao24": "39b7eb",
+        "tail_number": "F-GVMA",
+        "modele": "Bombardier Global 7500",
+        "usage": "privé",
+        "autonomie_km": 14260,
+        "consommation_kg_par_heure": 1800,
+        "source": "LVMH Fleet / ADSBExchange",
+        "verifie": true
+      }
+    ],
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Bernard_Arnault_%283%29_-_2017_%28cropped%29.jpg"
   }
 ]

@@ -5,12 +5,8 @@ from typing import Dict, Optional, Any
 from sqlalchemy.orm import Session
 from models import Flight
 
-def normaliser(texte: str) -> str:
-    """Supprime les accents et met en minuscules pour comparaison."""
-    return ''.join(
-        c for c in unicodedata.normalize('NFD', texte.lower())
-        if unicodedata.category(c) != 'Mn'
-    )
+from utils import normaliser
+
 
 def score_president(pays: str, db: Session) -> Optional[Dict[str, Any]]:
     """
@@ -51,8 +47,17 @@ def score_president(pays: str, db: Session) -> Optional[Dict[str, Any]]:
     if not icao24_list:
         return None
 
-    # 3. Récupérer tous les vols de ces jets depuis SQLite
-    vols = db.query(Flight).filter(Flight.icao24.in_(icao24_list)).all()
+    # 3. Récupérer tous les vols de ces jets depuis le début du mois (Reset mensuel)
+    import datetime
+    now = datetime.datetime.now()
+    start_of_month = datetime.datetime(now.year, now.month, 1)
+    start_unix = int(start_of_month.timestamp())
+
+    vols = db.query(Flight).filter(
+        Flight.icao24.in_(icao24_list),
+        Flight.departure_time >= start_unix
+    ).all()
+    
     if not vols:
         return None
 
@@ -114,12 +119,17 @@ def score_president(pays: str, db: Session) -> Optional[Dict[str, Any]]:
     else:
         niveau = "🟢 NORMAL"
 
+    vols_personnels = vols_suspects
+    vols_officiels = total_vols - vols_personnels
+
     return {
         "pays": pays_data["pays"],
         "dirigeant": pays_data["dirigeant"],
         "niveau": niveau,
         "total_heures": round(total_heures, 2),
         "total_vols": total_vols,
+        "vols_officiels": vols_officiels,
+        "vols_personnels": vols_personnels,
         "co2_kg": round(co2_total_kg, 2),
         "cout_usd": round(cout_usd, 2),
         "ratio_suspects": round(ratio_suspects, 4),

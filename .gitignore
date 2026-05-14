@@ -3,3 +3,12 @@
 __pycache__/
 poll.log
 mock_flights.json
+.vercel
+*.csv
+*.pem
+*.jpeg
+tree.json
+aleph.json
+test.json
+node_modules/
+dist/

@@ -1,0 +1,938 @@
+{
+  "timestamp": "2026-05-13T05:34:38.839481",
+  "summary": {
+    "total_jets": 92,
+    "trackable": 53,
+    "not_trackable": 39,
+    "detected": 1,
+    "airborne": 0,
+    "on_ground": 1,
+    "offline": 52,
+    "bugs_count": 1,
+    "coverage_pct": 1.9
+  },
+  "bugs": [
+    "SU-GGG (010024): alt_baro='ground' est traite comme en vol par l'algo actuel!"
+  ],
+  "duplicates": {},
+  "results": [
+    {
+      "pays": "Algérie",
+      "dirigeant": "Abdelmadjid Tebboune",
+      "tail": "7T-VPB",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Angola",
+      "dirigeant": "João Lourenço",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Botswana",
+      "dirigeant": "Duma Boko",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Burkina Faso",
+      "dirigeant": "Ibrahim Traoré",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Burundi",
+      "dirigeant": "Évariste Ndayishimiye",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Bénin",
+      "dirigeant": "Patrice Talon",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Cameroun",
+      "dirigeant": "Paul Biya",
+      "tail": "TJ-AAC",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Cap-Vert",
+      "dirigeant": "José Maria Neves",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Comores",
+      "dirigeant": "Azali Assoumani",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Djibouti",
+      "dirigeant": "Ismaïl Omar Guelleh",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Eswatini",
+      "dirigeant": "Roi Mswati III",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Gambie",
+      "dirigeant": "Adama Barrow",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Guinée",
+      "dirigeant": "Mamadi Doumbouya",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Guinée-Bissau",
+      "dirigeant": "Umaro Sissoco Embaló",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Lesotho",
+      "dirigeant": "Letsie III",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Liberia",
+      "dirigeant": "Joseph Boakai",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Madagascar",
+      "dirigeant": "Andry Rajoelina",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Malawi",
+      "dirigeant": "Lazarus Chakwera",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Mali",
+      "dirigeant": "Assimi Goïta",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Maurice",
+      "dirigeant": "Prithvirajsing Roopun",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Mauritanie",
+      "dirigeant": "Mohamed Ould Ghazouani",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Mozambique",
+      "dirigeant": "Filipe Nyusi",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Namibie",
+      "dirigeant": "Nangolo Mbumba",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Niger",
+      "dirigeant": "Abdourahamane Tchiani",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Rwanda",
+      "dirigeant": "Paul Kagame",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "République centrafricaine",
+      "dirigeant": "Faustin-Archange Touadéra",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Seychelles",
+      "dirigeant": "Wavel Ramkalawan",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Sierra Leone",
+      "dirigeant": "Julius Maada Bio",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Somalie",
+      "dirigeant": "Hassan Sheikh Mohamoud",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Soudan",
+      "dirigeant": "Abdel Fattah al-Burhan",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Soudan du Sud",
+      "dirigeant": "Salva Kiir",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "São Tomé-et-Príncipe",
+      "dirigeant": "Carlos Vila Nova",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Tchad",
+      "dirigeant": "Mahamat Idriss Déby",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Togo",
+      "dirigeant": "Faure Gnassingbé",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Tunisie",
+      "dirigeant": "Kaïs Saïed",
+      "tail": "TS-KRT",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Zambie",
+      "dirigeant": "Hakainde Hichilema",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Zimbabwe",
+      "dirigeant": "Emmerson Mnangagwa",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Érythrée",
+      "dirigeant": "Issaias Afwerki",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Éthiopie",
+      "dirigeant": "Abiy Ahmed",
+      "tail": "?",
+      "icao24": null,
+      "status": "NO_ICAO24",
+      "issue": "Impossible a tracker sans code ICAO24"
+    },
+    {
+      "pays": "Afrique du Sud",
+      "dirigeant": "Cyril Ramaphosa",
+      "tail": "ZS-RSA",
+      "icao24": "00aec9",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Algérie",
+      "dirigeant": "Abdelmadjid Tebboune",
+      "tail": "7T-VPP",
+      "icao24": "0a402d",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Algérie",
+      "dirigeant": "Abdelmadjid Tebboune",
+      "tail": "7T-VPG",
+      "icao24": "0a400b",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Algérie",
+      "dirigeant": "Abdelmadjid Tebboune",
+      "tail": "7T-VPC",
+      "icao24": "0a4009",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Algérie",
+      "dirigeant": "Abdelmadjid Tebboune",
+      "tail": "7T-VPR",
+      "icao24": "0a4005",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Algérie",
+      "dirigeant": "Abdelmadjid Tebboune",
+      "tail": "7T-VPS",
+      "icao24": "0a4006",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Algérie",
+      "dirigeant": "Abdelmadjid Tebboune",
+      "tail": "7T-VPE",
+      "icao24": "0a404c",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Angola",
+      "dirigeant": "João Lourenço",
+      "tail": "D2-ANG",
+      "icao24": "090088",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Angola",
+      "dirigeant": "João Lourenço",
+      "tail": "D2-EEB",
+      "icao24": "0900b5",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Burkina Faso",
+      "dirigeant": "Ibrahim Traoré",
+      "tail": "XT-BFA",
+      "icao24": "09c008",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Burundi",
+      "dirigeant": "Évariste Ndayishimiye",
+      "tail": "9U-BKB",
+      "icao24": "032007",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Cameroun",
+      "dirigeant": "Paul Biya",
+      "tail": "TJ-QCB",
+      "icao24": "034066",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Cameroun",
+      "dirigeant": "Paul Biya",
+      "tail": "TJ-QCA",
+      "icao24": "034044",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Congo-Brazzaville",
+      "dirigeant": "Denis Sassou Nguesso",
+      "tail": "TN-ELS",
+      "icao24": "036bc1",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Congo-Brazzaville",
+      "dirigeant": "Denis Sassou Nguesso",
+      "tail": "TN-AFS",
+      "icao24": "0360b2",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Congo-Brazzaville",
+      "dirigeant": "Denis Sassou Nguesso",
+      "tail": "TN-AJN",
+      "icao24": "0360f8",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Côte d'Ivoire",
+      "dirigeant": "Alassane Ouattara",
+      "tail": "TU-VAS",
+      "icao24": "038613",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Côte d'Ivoire",
+      "dirigeant": "Alassane Ouattara",
+      "tail": "TU-VAE",
+      "icao24": "038615",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Côte d'Ivoire",
+      "dirigeant": "Alassane Ouattara",
+      "tail": "TU-VAG",
+      "icao24": "707505",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Côte d'Ivoire",
+      "dirigeant": "Alassane Ouattara",
+      "tail": "TU-VAD",
+      "icao24": "038084",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Djibouti",
+      "dirigeant": "Ismaïl Omar Guelleh",
+      "tail": "J2-HPV",
+      "icao24": "098014",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Eswatini",
+      "dirigeant": "Roi Mswati III",
+      "tail": "3DC-SDF",
+      "icao24": "07a201",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Gabon",
+      "dirigeant": "Brice Oligui Nguema",
+      "tail": "TR-KPR",
+      "icao24": "03e00a",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Gabon",
+      "dirigeant": "Brice Oligui Nguema",
+      "tail": "TR-KJD",
+      "icao24": "03e00f",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Ghana",
+      "dirigeant": "John Mahama",
+      "tail": "9G-EXE",
+      "icao24": "044037",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Guinée équatoriale",
+      "dirigeant": "Teodoro Obiang Nguema Mbasogo",
+      "tail": "3C-EGE",
+      "icao24": "04200a",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Kenya",
+      "dirigeant": "William Ruto",
+      "tail": "KAF308",
+      "icao24": "04c030",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Libye",
+      "dirigeant": "Mohamed al-Menfi",
+      "tail": "5A-ONE",
+      "icao24": "018021",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Maroc",
+      "dirigeant": "Roi Mohammed VI",
+      "tail": "CN-MBH",
+      "icao24": "020130",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Maroc",
+      "dirigeant": "Roi Mohammed VI",
+      "tail": "CN-MVI",
+      "icao24": "0200cc",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Nigeria",
+      "dirigeant": "Bola Tinubu",
+      "tail": "5N-FGA",
+      "icao24": "06430c",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Nigeria",
+      "dirigeant": "Bola Tinubu",
+      "tail": "5N-FGT",
+      "icao24": "064051",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Nigeria",
+      "dirigeant": "Bola Tinubu",
+      "tail": "5N-FGS",
+      "icao24": "06401c",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Nigeria",
+      "dirigeant": "Bola Tinubu",
+      "tail": "5N-FGV",
+      "icao24": "0640f1",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Nigeria",
+      "dirigeant": "Bola Tinubu",
+      "tail": "5N-FGU",
+      "icao24": "0640f0",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Nigeria",
+      "dirigeant": "Bola Tinubu",
+      "tail": "5N-FGW",
+      "icao24": "0640f2",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Nigeria",
+      "dirigeant": "Bola Tinubu",
+      "tail": "5N-FGZ",
+      "icao24": "0641e1",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Ouganda",
+      "dirigeant": "Yoweri Museveni",
+      "tail": "5X-UGF",
+      "icao24": "06804e",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "République Démocratique du Congo",
+      "dirigeant": "Félix Tshisekedi",
+      "tail": "9S-CGC",
+      "icao24": "08cbab",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "République Démocratique du Congo",
+      "dirigeant": "Félix Tshisekedi",
+      "tail": "9Q-CDC",
+      "icao24": "08cbcb",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Sénégal",
+      "dirigeant": "Bassirou Diomaye Faye",
+      "tail": "6V-SEN",
+      "icao24": "0703fa",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Sénégal",
+      "dirigeant": "Bassirou Diomaye Faye",
+      "tail": "6V-ONE",
+      "icao24": "070ed4",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Sénégal",
+      "dirigeant": "Bassirou Diomaye Faye",
+      "tail": "6V-AEF",
+      "icao24": "070156",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Sénégal",
+      "dirigeant": "Bassirou Diomaye Faye",
+      "tail": "6V-SEN",
+      "icao24": "340001",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Tanzanie",
+      "dirigeant": "Samia Suluhu Hassan",
+      "tail": "5H-ONE",
+      "icao24": "08000f",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Togo",
+      "dirigeant": "Faure Gnassingbé",
+      "tail": "5V-TAI",
+      "icao24": "088005",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Togo",
+      "dirigeant": "Faure Gnassingbé",
+      "tail": "5V-TTS",
+      "icao24": "08800a",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Égypte",
+      "dirigeant": "Abdel Fattah al-Sissi",
+      "tail": "SU-GGG",
+      "icao24": "010024",
+      "status": "DETECTED",
+      "analysis": {
+        "has_GND_field": false,
+        "GND_value": null,
+        "alt_baro": "ground",
+        "alt_baro_type": "str",
+        "gs": 2.8,
+        "lat": -1.330882,
+        "lon": 36.922208,
+        "track": 343.12,
+        "flight": "EGY01   ",
+        "BUG_DETECTED": "alt_baro='ground' est traite comme en vol par l'algo actuel!",
+        "is_airborne": false,
+        "logic_path": "alt_baro='ground' (BUG: fetcher.py dit EN VOL car alt_baro is not None)"
+      },
+      "raw_fields": {
+        "hex": "010024",
+        "flight": "EGY01   ",
+        "alt_baro": "ground",
+        "alt_geom": null,
+        "gs": 2.8,
+        "track": 343.12,
+        "lat": -1.330882,
+        "lon": 36.922208,
+        "GND": null,
+        "t": "A342",
+        "r": "SU-GGG"
+      }
+    },
+    {
+      "pays": "Égypte",
+      "dirigeant": "Abdel Fattah al-Sissi",
+      "tail": "SU-EGY",
+      "icao24": "010230",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Elon Musk",
+      "dirigeant": "Elon Musk",
+      "tail": "N628TS",
+      "icao24": "a835af",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Mark Zuckerberg",
+      "dirigeant": "Mark Zuckerberg",
+      "tail": "N68KP",
+      "icao24": "a91911",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Kim Kardashian",
+      "dirigeant": "Kim Kardashian",
+      "tail": "N1980K",
+      "icao24": "a18706",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    },
+    {
+      "pays": "Bernard Arnault",
+      "dirigeant": "Bernard Arnault",
+      "tail": "F-GVMA",
+      "icao24": "39b7eb",
+      "status": "OFFLINE",
+      "api_data": {
+        "_empty": true,
+        "_status": "no_aircraft_in_response"
+      }
+    }
+  ]
+}
