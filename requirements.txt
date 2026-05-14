@@ -19,7 +19,6 @@ cohere
 crewai>=0.80.0
 crewai-tools>=0.20.0
 groq>=0.8.0                 # LLM Groq (Llama 3.1 70B — gratuit, recommandé)
-sentence-transformers>=2.7.0 # Embeddings pour la mémoire CrewAI (sans OpenAI)
 psycopg2-binary             # Support pour base de données Postgres sur Vercel
 apscheduler                 # Planificateur de tâches (utilisé en fallback local)
 pydantic>=2.0.0             # Modèles de données
