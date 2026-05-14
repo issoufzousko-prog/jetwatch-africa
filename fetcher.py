@@ -305,144 +305,76 @@ def scan_global_ghost_fleet(db: Session, known_icao24s: set) -> None:
 
 def poll_all_fleet(db: Session) -> dict:
     """
-    Parcourt l'ensemble de la flotte présidentielle africaine, vérifie 
-    le statut en vol via les APIs ADS-B (adsb.lol + adsb.fi) et met à jour
-    la base SQLite avec les positions GPS.
-
-    Corrections appliquées :
-    - Multi-provider (adsb.lol → adsb.fi fallback)
-    - Logique is_airborne robuste (gère alt_baro="ground")
-    - db.flush() après création de vol pour éviter les doublons
-    - Nettoyage de alt_baro avant insertion en base
+    Optimisation Vercel : Utilise les données globales pour mettre à jour toute la flotte
+    en une seule requête au lieu de boucler avec des sleep(1.5s).
     """
-    stats = {"detectes": 0, "en_vol": 0, "atterris": 0, "sources": {"adsb.lol": 0, "adsb.fi": 0}}
-    target_fleets = db.query(TargetFleet).all()
+    stats = {"detectes": 0, "en_vol": 0, "atterris": 0, "sources": {}}
     now = int(time.time())
-
-    known_icao24s = set()
-    for fleet in target_fleets:
-        if fleet.icao24:
-            known_icao24s.add(fleet.icao24.lower())
-                
-    # Lancer le Geofencing pour les flottes fantômes (Près des capitales)
-    scan_ghost_fleet(db, known_icao24s)
     
-    # Lancer le Scan Global (Partout en Afrique via /v2/all)
-    scan_global_ghost_fleet(db, known_icao24s)
+    # 1. Récupérer les données globales (tous les avions d'un coup)
+    all_aircraft = []
+    for provider in ADSB_PROVIDERS:
+        url = provider["base_url"] + provider["all_endpoint"]
+        try:
+            resp = requests.get(url, headers={"Accept": "application/json"}, timeout=15)
+            if resp.status_code == 200:
+                all_aircraft = resp.json().get("ac", [])
+                stats["sources"][provider["name"]] = len(all_aircraft)
+                if all_aircraft:
+                    break # On prend le premier qui répond
+        except Exception:
+            continue
 
+    # 2. Créer un index ICAO24 -> Data
+    ac_index = {ac.get("hex", "").lower(): ac for ac in all_aircraft if ac.get("hex")}
+
+    # 3. Récupérer la flotte cible
+    target_fleets = db.query(TargetFleet).all()
+    known_icao24s = {f.icao24.lower() for f in target_fleets if f.icao24}
+
+    # 4. Détecter les vols fantômes (déjà optimisé dans scan_ghost_fleet)
+    scan_ghost_fleet(db, known_icao24s)
+
+    # 5. Mettre à jour la flotte connue à partir de l'index
     for fleet in target_fleets:
-        icao24 = fleet.icao24
+        icao24 = (fleet.icao24 or "").lower()
         if not icao24:
             continue
 
-        tail = fleet.tail_number or "Inconnu"
-            
-        # Protection contre le rate limit (1.5s entre chaque requête)
-        time.sleep(1.5)
+        live_data = ac_index.get(icao24)
+        vol_ouvert = db.query(Flight).filter(Flight.icao24 == icao24, Flight.arrival_time == None).first()
 
-        live_data = get_live_position(icao24)
         if live_data:
             stats["detectes"] += 1
-            
-            # Utilise la nouvelle logique robuste pour déterminer si l'avion est en vol
             is_airborne = determine_airborne(live_data)
-                
             callsign = str(live_data.get("flight", "")).strip() or "Inconnu"
-            
-            # Extraire les coordonnées
-            lat = live_data.get("lat")
-            lon = live_data.get("lon")
-            alt_baro_raw = live_data.get("alt_baro")
-            gs = live_data.get("gs")
-            track = live_data.get("track")
-
-            # Nettoyer alt_baro : si c'est la string "ground", stocker None
-            alt_baro = alt_baro_raw if isinstance(alt_baro_raw, (int, float)) else None
-            
-            # Chercher un vol ouvert (departure_time défini mais arrival_time null)
-            vol_ouvert = db.query(Flight).filter(
-                Flight.icao24 == icao24,
-                Flight.arrival_time == None
-            ).order_by(Flight.departure_time.desc()).first()
+            lat, lon = live_data.get("lat"), live_data.get("lon")
+            alt = live_data.get("alt_baro") if isinstance(live_data.get("alt_baro"), (int, float)) else None
 
             if is_airborne:
                 stats["en_vol"] += 1
                 if not vol_ouvert:
-                    # Créer un nouveau vol
-                    vol_ouvert = Flight(
-                        icao24=icao24,
-                        callsign=callsign,
-                        departure_airport=None,
-                        arrival_airport=None,
-                        departure_time=now,
-                        arrival_time=None,
-                        duration_minutes=0,
-                        classification=None,
-                        co2_kg=None
-                    )
+                    vol_ouvert = Flight(icao24=icao24, callsign=callsign, departure_time=now, duration_minutes=0)
                     db.add(vol_ouvert)
-                    db.flush()  # FIX: Rendre le vol visible immédiatement pour éviter les doublons
-                    log_poll(f"✈ {tail} détecté EN VOL (Nouveau vol) | callsign: {callsign}")
-                else:
-                    # Mettre à jour la durée
-                    vol_ouvert.duration_minutes = round((now - vol_ouvert.departure_time) / 60.0, 2)
-                    log_poll(f"✈ {tail} détecté EN VOL | callsign: {callsign} | durée: {vol_ouvert.duration_minutes} min")
-                    
-                # Enregistrer la position GPS si disponible
+                    db.flush()
+                
+                vol_ouvert.duration_minutes = round((now - vol_ouvert.departure_time) / 60.0, 2)
                 if lat is not None and lon is not None:
-                    new_pos = FlightPosition(
-                        lat=lat,
-                        lon=lon,
-                        alt_baro=alt_baro,
-                        gs=gs,
-                        track=track,
-                        timestamp=now
-                    )
-                    vol_ouvert.positions.append(new_pos)
-                    
+                    vol_ouvert.positions.append(FlightPosition(lat=lat, lon=lon, alt_baro=alt, gs=live_data.get("gs"), track=live_data.get("track"), timestamp=now))
             else:
-                # L'avion est au sol
                 if vol_ouvert:
-                    # Fermer le vol
                     vol_ouvert.arrival_time = now
                     vol_ouvert.duration_minutes = round((now - vol_ouvert.departure_time) / 60.0, 2)
                     stats["atterris"] += 1
-                    
-                    # Dernière position au sol si dispo
-                    if lat is not None and lon is not None:
-                        new_pos = FlightPosition(
-                            lat=lat,
-                            lon=lon,
-                            alt_baro=alt_baro,
-                            gs=gs,
-                            track=track,
-                            timestamp=now
-                        )
-                        vol_ouvert.positions.append(new_pos)
-                        
-                    log_poll(f"✈ {tail} détecté AU SOL (Vol terminé) | callsign: {callsign} | durée totale: {vol_ouvert.duration_minutes} min")
-                else:
-                    pass # Avion parqué, rien à faire
+                    db.commit()
         else:
-            # L'avion n'est plus détecté du tout par les APIs (Hors radar ou transpondeur éteint)
-            vol_ouvert = db.query(Flight).filter(
-                Flight.icao24 == icao24,
-                Flight.arrival_time == None
-            ).order_by(Flight.departure_time.desc()).first()
-
+            # Hors radar : Fermeture auto après 1h
             if vol_ouvert:
-                # Vérifier depuis combien de temps on a perdu le signal
-                last_update = vol_ouvert.departure_time
-                if vol_ouvert.positions:
-                    # Les positions sont ordonnées par l'insertion, la dernière est à la fin
-                    last_update = max([p.timestamp for p in vol_ouvert.positions] + [vol_ouvert.departure_time])
-                
-                # Si on n'a plus de signal depuis plus de 60 minutes (3600 secondes), on ferme le vol
-                if (now - last_update) > 3600:
-                    vol_ouvert.arrival_time = last_update
-                    vol_ouvert.duration_minutes = round((last_update - vol_ouvert.departure_time) / 60.0, 2)
+                last_pos = max([p.timestamp for p in vol_ouvert.positions] + [vol_ouvert.departure_time])
+                if (now - last_pos) > 3600:
+                    vol_ouvert.arrival_time = last_pos
+                    vol_ouvert.duration_minutes = round((last_pos - vol_ouvert.departure_time) / 60.0, 2)
                     stats["atterris"] += 1
-                    log_poll(f"✈ {tail} perdu du radar. Fermeture auto (signal perdu depuis >1h). Durée: {vol_ouvert.duration_minutes} min")
 
     db.commit()
     return stats

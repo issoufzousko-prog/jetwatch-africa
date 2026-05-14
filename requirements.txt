@@ -20,6 +20,5 @@ crewai==0.22.4
 langchain-openai==0.0.5
 groq>=0.8.0                 # LLM Groq (Llama 3.1 70B — gratuit, recommandé)
 psycopg2-binary             # Support pour base de données Postgres sur Vercel
-apscheduler                 # Planificateur de tâches (utilisé en fallback local)
 pydantic>=2.0.0             # Modèles de données
 python-multipart            # Pour les formulaires/uploads

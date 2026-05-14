@@ -10,7 +10,7 @@ from fastapi import FastAPI, HTTPException, Depends, BackgroundTasks, Request
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
-from apscheduler.schedulers.background import BackgroundScheduler
+# BackgroundScheduler removed for Vercel compatibility
 from datetime import datetime, timedelta
 
 load_dotenv()
@@ -19,7 +19,7 @@ last_poll_time = None
 
 # Import des modules internes
 # Import des modules internes
-from database import SessionLocal, engine, get_db
+from database import SessionLocal, engine, get_db, SQLALCHEMY_DATABASE_URL
 from models import Flight, User, Target, TargetFleet
 from utils import normaliser, load_flottes
 
@@ -236,27 +236,33 @@ def verify_api_key(api_key: str = Depends(api_key_header)):
 # Création des tables au démarrage si elles n'existent pas
 # Créer les tables si nécessaire
 import models
-models.Base.metadata.create_all(bind=engine)
+try:
+    models.Base.metadata.create_all(bind=engine)
+except Exception as e:
+    print(f"WARNING: Could not create tables: {e}")
 
 
 def init_db_from_json():
     db = SessionLocal()
     try:
+        # Optimisation Vercel : On ne vérifie qu'une seule fois si la base est vide
+        if db.query(Target).first():
+            print("[Init] La base de données contient déjà des cibles. Saut de l'initialisation JSON.")
+            return
+
         json_path = os.path.join(os.path.dirname(__file__), "data", "jets_africains.json")
         if not os.path.exists(json_path):
+            print(f"[Init] Fichier {json_path} introuvable.")
             return
             
         with open(json_path, 'r', encoding='utf-8') as f:
             flottes = json.load(f)
             
-        added = 0
+        print(f"[Init] Initialisation de la base à partir de {len(flottes)} pays...")
+        
         for item in flottes:
             pays_nom = item.get("pays")
             if not pays_nom:
-                continue
-                
-            existing = db.query(Target).filter(Target.pays == pays_nom).first()
-            if existing:
                 continue
                 
             target = Target(
@@ -266,25 +272,23 @@ def init_db_from_json():
                 photo_url=item.get("photo_url")
             )
             db.add(target)
-            db.commit()
-            db.refresh(target)
+            db.flush() # Pour obtenir l'ID sans commit complet
             
             for jet in item.get("flotte", []):
                 fleet_item = TargetFleet(
                     target_id=target.id,
                     icao24=jet.get("icao24", "").lower() if jet.get("icao24") else "",
                     tail_number=jet.get("tail_number"),
-                    description=jet.get("description"),
+                    description=jet.get("description") or jet.get("modele"),
                     verifie=jet.get("verifie", True)
                 )
                 db.add(fleet_item)
-            db.commit()
-            added += 1
-            
-        if added > 0:
-            print(f"Migration JSON vers SQL réussie: {added} cibles ajoutées.")
+        
+        db.commit()
+        print("[Init] Migration JSON vers SQL réussie.")
     except Exception as e:
-        print(f"Erreur de migration: {e}")
+        db.rollback()
+        print(f"[Init] Erreur de migration: {e}")
     finally:
         db.close()
 
@@ -776,7 +780,11 @@ def submit_investigation_report(
 # PIPELINE CREWAI — Investigation autonome multi-agents (Couches 3+4+5)
 # ─────────────────────────────────────────────────────────────────────
 
-import investigation_crew
+try:
+    import investigation_crew
+except Exception as e:
+    print(f"CRITICAL: Failed to import investigation_crew: {e}")
+    investigation_crew = None
 from threading import Thread
 
 # Stockage en mémoire des investigations en cours / terminées
