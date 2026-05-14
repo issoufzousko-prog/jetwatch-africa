@@ -1,42 +1,26 @@
 {
   "version": 2,
-  "framework": "vite",
-  "builds": [
+  "rewrites": [
     {
-      "src": "api/index.py",
-      "use": "@vercel/python"
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/pow/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/ecdh/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/proxy-image",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/dist/$1"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "api/index.py"
-    },
-    {
-      "src": "/pow/(.*)",
-      "dest": "api/index.py"
-    },
-    {
-      "src": "/ecdh/(.*)",
-      "dest": "api/index.py"
-    },
-    {
-        "src": "/proxy-image",
-        "dest": "api/index.py"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/dist/$1",
-      "check": true
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/dist/index.html"
-    }
-
   ],
   "crons": [
     {
