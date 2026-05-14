@@ -25,6 +25,11 @@
       "destination": "/index.html"
     }
   ],
+  "functions": {
+    "api/**/*.py": {
+      "excludeFiles": "frontend/**"
+    }
+  },
   "crons": [
     {
       "path": "/api/cron/poll",
