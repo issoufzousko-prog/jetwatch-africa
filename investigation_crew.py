@@ -23,7 +23,8 @@ from typing import Optional
 # ── Détection de la disponibilité de CrewAI ──────────────────────────────────
 try:
     from crewai import Agent, Task, Crew, Process, LLM
-    from crewai_tools import SerperDevTool
+    from crewai.tools import tool
+    import requests
     CREWAI_AVAILABLE = True
 except ImportError:
     CREWAI_AVAILABLE = False
@@ -83,25 +84,37 @@ class InvestigationResult:
         self.error: Optional[str] = None
 
 
-# ── Outils des agents ─────────────────────────────────────────────────────────
-def _build_tools():
-    """Construit la liste d'outils selon les clés disponibles."""
-    tools = []
-    
+@tool("Search Internet")
+def search_internet(query: str) -> str:
+    """Useful to search the internet about a given topic and return relevant results."""
     serper_key = os.getenv("SERPER_API_KEY")
     if serper_key:
-        # Serper = API Google Search avec 2500 requêtes gratuites/mois
-        tools.append(SerperDevTool(api_key=serper_key))
-    
-    # Fallback : DuckDuckGo via crewai_tools si disponible
-    if not tools:
+        url = "https://google.serper.dev/search"
+        payload = json.dumps({"q": query})
+        headers = {
+            'X-API-KEY': serper_key,
+            'Content-Type': 'application/json'
+        }
         try:
-            from crewai_tools import DuckDuckGoSearchTool
-            tools.append(DuckDuckGoSearchTool())
-        except ImportError:
-            pass
+            response = requests.post(url, headers=headers, data=payload)
+            results = response.json()
+            if 'organic' in results:
+                return "\\n".join([f"Title: {r.get('title')}\\nSnippet: {r.get('snippet')}\\nLink: {r.get('link')}\\n" for r in results['organic'][:5]])
+            return str(results)
+        except Exception as e:
+            return f"Error searching internet: {str(e)}"
     
-    return tools
+    # Fallback to duckduckgo_search library since it's in requirements.txt
+    try:
+        from duckduckgo_search import DDGS
+        results = DDGS().text(query, max_results=5)
+        return "\\n".join([f"Title: {r.get('title')}\\nSnippet: {r.get('body')}\\nLink: {r.get('href')}\\n" for r in results])
+    except Exception as e:
+        return f"Error with DuckDuckGo fallback: {str(e)}"
+
+def _build_tools():
+    """Construit la liste d'outils selon les clés disponibles."""
+    return [search_internet]
 
 
 # ── Extraction des URLs sources depuis le rapport OSINT ──────────────────────
