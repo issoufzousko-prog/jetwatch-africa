@@ -39,13 +39,14 @@ def get_llm(model_id: str = "groq/llama-3.3-70b-versatile"):
     groq_key = os.getenv("GROQ_API_KEY")
 
     if groq_key:
-        from langchain_groq import ChatGroq
+        from langchain_openai import ChatOpenAI
         # Utilise le modèle choisi par l'utilisateur via le frontend
         print(f"[CrewAI] Modèle sélectionné : {model_id}")
         model_name = model_id.split("/")[-1] if "/" in model_id else model_id
-        return ChatGroq(
-            model_name=model_name,
-            groq_api_key=groq_key,
+        return ChatOpenAI(
+            model=model_name,
+            openai_api_key=groq_key,
+            base_url="https://api.groq.com/openai/v1",
             temperature=0.1,
             max_tokens=4000,
         )
